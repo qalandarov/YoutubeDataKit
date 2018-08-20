@@ -1,19 +1,19 @@
 //
-//  YoutubeKit.swift
-//  YoutubeKit
+//  YoutubeDataKit.swift
+//  YoutubeDataKit
 //
-//  Created by Ryo Ishikawa on 12/30/2017
+//  Created by Islam Qalandarov on 8/20/2017
 //
 
 import Foundation
 
-public final class YoutubeKit {
+public final class YoutubeDataKit {
     
-    public static let shared = YoutubeKit()
+    public static let shared = YoutubeDataKit()
     public static let youtubeDataAPIVersion = "v3"
     
-    internal private(set) var apiKey: String = ""
-    internal private(set) var accessToken: String = ""
+    private(set) var apiKey: String = ""
+    private(set) var accessToken: String = ""
     
     public func setAPIKey(_ key: String) {
         self.apiKey = key
