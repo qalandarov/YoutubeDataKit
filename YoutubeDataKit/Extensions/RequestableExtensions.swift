@@ -8,7 +8,7 @@
 public extension Requestable {
     
     public var baseURL: URL {
-        return URL(string: "https://www.googleapis.com/youtube/\(YoutubeKit.youtubeDataAPIVersion)/")!
+        return URL(string: "https://www.googleapis.com/youtube/\(YoutubeDataKit.youtubeDataAPIVersion)/")!
     }
     
     public var queryParameters: [String: Any] {
@@ -18,7 +18,7 @@ public extension Requestable {
     public var headerField: [String: String] {
         var header: [String: String] = [:]
         if isAuthorizedRequest {
-            header["Authorization"] = "Bearer \(YoutubeKit.shared.accessToken)"
+            header["Authorization"] = "Bearer \(YoutubeDataKit.shared.accessToken)"
         }
         return header
     }
@@ -39,7 +39,7 @@ public extension Requestable {
         urlRequest.httpMethod = httpMethod.rawValue
         
         if isAuthorizedRequest && !header.contains(where: { $0.key == "Authorization" }) {
-            header["Authorization"] = "Bearer \(YoutubeKit.shared.accessToken)"
+            header["Authorization"] = "Bearer \(YoutubeDataKit.shared.accessToken)"
         }
         
         header.forEach { key, value in
@@ -57,7 +57,7 @@ public extension Requestable {
         var keyParams: [String: Any] = queryParameters
         
         if !isAuthorizedRequest {
-            keyParams["key"] = YoutubeKit.shared.apiKey
+            keyParams["key"] = YoutubeDataKit.shared.apiKey
         }
         
         urlComponents.query = keyParams
