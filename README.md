@@ -36,10 +36,10 @@ Next, add this code to your AppDelegate:
 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
-YoutubeDataKit.shared.setAPIKey(API_KEY)
-
-return true
+    
+    YoutubeDataKit.shared.setAPIKey(API_KEY)
+    
+    return true
 }
 
 ```
@@ -52,12 +52,12 @@ let request = VideoListRequest(part: [.id, .statistics], filter: .chart)
 
 // Send a request.
 ApiSession.shared.send(request) { result in
-switch result {
-case .success(let response):
-print(response)
-case .failed(let error):
-print(error)
-}
+    switch result {
+    case .success(let response):
+        print(response)
+    case .failed(let error):
+        print(error)
+    }
 }
 
 ```
@@ -84,14 +84,13 @@ var nextPageToken: String?
 
 // Send some request
 ApiSession.shared.send(request) { [weak self] result in
-switch result {
-case .success(let response):
-
-// Save nextPageToken
-self?.nextPage = response.nextPageToken
-case .failed(let error):
-print(error)
-}
+    switch result {
+    case .success(let response):
+        // Save nextPageToken
+        self?.nextPage = response.nextPageToken
+    case .failed(let error):
+        print(error)
+    }
 }
 ...
 
@@ -108,11 +107,11 @@ First, add this code in your AppDelegate.
 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
-// Set your access token for autheticate request
-YoutubeKit.shared.setAccessToken("Your access token")
-
-return true
+    
+    // Set your access token for autheticate request
+    YoutubeKit.shared.setAccessToken("Your access token")
+    
+    return true
 }
 ```
 
@@ -124,12 +123,12 @@ let request = ActivityListRequest(part: [.snippet], filter: .mine(true))
 
 // Send a request.
 ApiSession.shared.send(request) { result in
-switch result {
-case .success(let video):
-print(video)
-case .failed(let error):
-print(error)
-}
+    switch result {
+    case .success(let video):
+        print(video)
+    case .failed(let error):
+        print(error)
+    }
 }
 ```
 
