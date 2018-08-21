@@ -2,12 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:YoutubeDataKit.playground">
+      location = "group:Example/YoutubeDataKit.playground">
    </FileRef>
    <FileRef
       location = "group:Example/Example.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:YoutubeDataKit.xcodeproj">
+      location = "group:YoutubeDataKit/YoutubeDataKit.xcodeproj">
    </FileRef>
 </Workspace>
