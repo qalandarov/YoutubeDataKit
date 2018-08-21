@@ -4,7 +4,8 @@ Pod::Spec.new do |s|
   s.summary          = 'YoutubeDataKit is a framework in Swift that wraps YoutubeDataAPI (v3).'
 
   s.description      = <<-DESC
-YoutubeDataKit is a framework to make it easy to fetch information about Youtube items (videos, playlists, channels...) - Does NOT include the player!
+YoutubeDataKit is a framework to make it easy to work with Youtube items (videos, playlists, channels...)
+YoutubeDataKit is derived from YoutubeKit (by rinov) and extracted only the Data API part - Does *NOT* include the player!.
                        DESC
 
   s.homepage         = 'https://github.com/qalandarov/YoutubeDataKit'
@@ -14,6 +15,6 @@ YoutubeDataKit is a framework to make it easy to fetch information about Youtube
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'YoutubeDataKit/**/.swift'
+  s.source_files = 'YoutubeDataKit/YoutubeDataKit/**/*.swift'
   
  end
