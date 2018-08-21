@@ -1,3 +1,4 @@
+// Should be opened only from the workspace as it imports the local framework
 import UIKit
 import YoutubeDataKit
 import PlaygroundSupport
