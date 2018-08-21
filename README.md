@@ -2,7 +2,7 @@
 
 `YoutubeDataKit` is [YoutubeDataAPI (v3)](https://developers.google.com/youtube/v3/docs/) wrapper in Swift. It's a framework to make it easy to work with Youtube items (videos, playlists, channels...)
 
-`YoutubeDataKit` is based on [YoutubeKit](https://github.com/rinov/YoutubeKit), but does *NOT* the player.
+`YoutubeDataKit` is based on [YoutubeKit](https://github.com/rinov/YoutubeKit), but does *NOT* include the player.
 
 [![Swift](https://img.shields.io/badge/Swift-4-blue.svg)](https://img.shields.io/badge/Swift-4-blue.svg)
 [![Cocoapods](https://img.shields.io/badge/Cocoapods-compatible-brightgreen.svg)](https://img.shields.io/badge/Cocoapods-compatible-brightgreen.svg)
