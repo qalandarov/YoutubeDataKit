@@ -7,6 +7,7 @@
 [![Swift](https://img.shields.io/badge/Swift-4-blue.svg)](https://img.shields.io/badge/Swift-4-blue.svg)
 [![Cocoapods](https://img.shields.io/badge/Cocoapods-compatible-brightgreen.svg)](https://img.shields.io/badge/Cocoapods-compatible-brightgreen.svg)
 [![Carthage](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg)]((https://img.shields.io/badge/Carthage-compatible-brightgreen.svg))
+[![Build Status](https://travis-ci.org/qalandarov/YoutubeDataKit.svg?branch=master)](https://travis-ci.org/qalandarov/YoutubeDataKit)
 [![License](https://img.shields.io/badge/LICENSE-MIT-yellowgreen.svg)](https://img.shields.io/badge/LICENSE-MIT-yellowgreen.svg)
 
 ## Available API lists:
@@ -133,7 +134,9 @@ ApiSession.shared.send(request) { result in
 ```
 
 ## Requirements
-XCode 9+
+iOS 9.3+
+
+Xcode 9+
 
 Swift 4+
 
