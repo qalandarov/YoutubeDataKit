@@ -4,11 +4,10 @@
 
 `YoutubeDataKit` is based on [YoutubeKit](https://github.com/rinov/YoutubeKit), but does *NOT* include the player.
 
-[![Swift](https://img.shields.io/badge/Swift-4-blue.svg)](https://img.shields.io/badge/Swift-4-blue.svg)
-[![Cocoapods](https://img.shields.io/badge/Cocoapods-compatible-brightgreen.svg)](https://img.shields.io/badge/Cocoapods-compatible-brightgreen.svg)
-[![Carthage](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg)]((https://img.shields.io/badge/Carthage-compatible-brightgreen.svg))
 [![Build Status](https://travis-ci.org/qalandarov/YoutubeDataKit.svg?branch=master)](https://travis-ci.org/qalandarov/YoutubeDataKit)
-[![License](https://img.shields.io/badge/LICENSE-MIT-yellowgreen.svg)](https://img.shields.io/badge/LICENSE-MIT-yellowgreen.svg)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/YoutubeDataKit.svg)](https://img.shields.io/cocoapods/v/YoutubeDataKit.svg)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg)]((https://img.shields.io/badge/Carthage-compatible-brightgreen.svg))
+[![Swift](https://img.shields.io/badge/Swift-4-blue.svg)](https://img.shields.io/badge/Swift-4-blue.svg)
 
 ## Available API lists:
 
