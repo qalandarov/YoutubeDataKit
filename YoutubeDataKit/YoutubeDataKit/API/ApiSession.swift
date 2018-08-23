@@ -33,8 +33,7 @@ public class ApiSession {
             
             // Decoding the response from `data` and handle DecodingError if occured.
             do {
-                let decoder = JSONDecoder()
-                let result = try decoder.decode(T.Response.self, from: data)
+                let result = try T.Response.decoded(from: data)
                 closure(.success(result))
             } catch let error as DecodingError {
                 closure(.failed(error))
@@ -44,5 +43,11 @@ public class ApiSession {
         }
         
         task.resume()
+    }
+}
+
+public extension Decodable {
+    static func decoded(from data: Data) throws -> Self {
+        return try JSONDecoder().decode(Self.self, from: data)
     }
 }
