@@ -154,4 +154,3 @@ public struct SearchListRequest: Requestable {
         self.videoType = videoType
     }
 }
-

@@ -44,4 +44,3 @@ public struct I18nLanguagesListRequest: Requestable {
         self.hl = hl
     }
 }
-

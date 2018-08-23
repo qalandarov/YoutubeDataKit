@@ -48,4 +48,3 @@ public struct VideoAbuseReportReasonsListRequest: Requestable {
         self.hl = hl
     }
 }
-
