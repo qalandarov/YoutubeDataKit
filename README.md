@@ -5,6 +5,7 @@
 `YoutubeDataKit` is based on [YoutubeKit](https://github.com/rinov/YoutubeKit), but does *NOT* include the player.
 
 [![Build Status](https://travis-ci.org/qalandarov/YoutubeDataKit.svg?branch=master)](https://travis-ci.org/qalandarov/YoutubeDataKit)
+[![Maintainability](https://api.codeclimate.com/v1/badges/31c798508927c59ec097/maintainability)](https://codeclimate.com/github/qalandarov/YoutubeDataKit/maintainability)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/YoutubeDataKit.svg)](https://img.shields.io/cocoapods/v/YoutubeDataKit.svg)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg)]((https://img.shields.io/badge/Carthage-compatible-brightgreen.svg))
 [![Swift](https://img.shields.io/badge/Swift-4-blue.svg)](https://img.shields.io/badge/Swift-4-blue.svg)
