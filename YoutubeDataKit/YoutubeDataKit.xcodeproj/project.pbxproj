@@ -374,7 +374,7 @@
 				A6659784212B539E00732791 /* Frameworks */,
 				A6659785212B539E00732791 /* Headers */,
 				A6659786212B539E00732791 /* Resources */,
-				A6FA8366212E783500EDA754 /* ShellScript */,
+				A6FA8366212E783500EDA754 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -458,13 +458,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A6FA8366212E783500EDA754 /* ShellScript */ = {
+		A6FA8366212E783500EDA754 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = SwiftLint;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
