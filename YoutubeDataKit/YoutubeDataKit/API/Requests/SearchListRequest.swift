@@ -34,41 +34,41 @@ public struct SearchListRequest: Requestable {
     }
     
     public var queryParameters: [String : Any] {
-        var q: [String: Any] = [:]
+        var query: [String: Any] = [:]
         let part = self.part
             .map { $0.rawValue }
             .joined(separator: ",")
-        q.appendingQueryParameter(key: "part", value: part)
+        query.appendingQueryParameter(key: "part", value: part)
 
         if let filterParam = filter?.keyValue {
-            q[filterParam.key] = filterParam.value
+            query[filterParam.key] = filterParam.value
         }
         
-        q.appendingQueryParameter(key: "channelId", value: channelID)
-        q.appendingQueryParameter(key: "q", value: searchQuery)
-        q.appendingQueryParameter(key: "topicId", value: topicID)
-        q.appendingQueryParameter(key: "type", value: resourceType)
-        q.appendingQueryParameter(key: "videoCategoryId", value: videoCategoryID)
-        q.appendingQueryParameter(key: "channelType", value: channelType)
-        q.appendingQueryParameter(key: "eventType", value: eventType)
-        q.appendingQueryParameter(key: "maxResults", value: maxResults)
-        q.appendingQueryParameter(key: "onBehalfOfContentOwner", value: onBehalfOfContentOwner)
-        q.appendingQueryParameter(key: "order", value: order)
-        q.appendingQueryParameter(key: "pageToken", value: pageToken)
-        q.appendingQueryParameter(key: "publishedAfter", value: publishedAfter)
-        q.appendingQueryParameter(key: "publishedBefore", value: publishedBefore)
-        q.appendingQueryParameter(key: "regionCode", value: regionCode)
-        q.appendingQueryParameter(key: "safeSearch", value: safeSearch)
-        q.appendingQueryParameter(key: "videoCaption", value: videoCaption)
-        q.appendingQueryParameter(key: "videoDefinition", value: videoDefinition)
-        q.appendingQueryParameter(key: "videoDimension", value: videoDimension)
-        q.appendingQueryParameter(key: "videoDuration", value: videoDuration)
-        q.appendingQueryParameter(key: "videoEmbeddable", value: videoEmbeddable)
-        q.appendingQueryParameter(key: "videoLicense", value: videoLicense)
-        q.appendingQueryParameter(key: "videoSyndicated", value: videoSyndicated)
-        q.appendingQueryParameter(key: "videoType", value: videoType)
+        query.appendingQueryParameter(key: "channelId", value: channelID)
+        query.appendingQueryParameter(key: "q", value: searchQuery)
+        query.appendingQueryParameter(key: "topicId", value: topicID)
+        query.appendingQueryParameter(key: "type", value: resourceType)
+        query.appendingQueryParameter(key: "videoCategoryId", value: videoCategoryID)
+        query.appendingQueryParameter(key: "channelType", value: channelType)
+        query.appendingQueryParameter(key: "eventType", value: eventType)
+        query.appendingQueryParameter(key: "maxResults", value: maxResults)
+        query.appendingQueryParameter(key: "onBehalfOfContentOwner", value: onBehalfOfContentOwner)
+        query.appendingQueryParameter(key: "order", value: order)
+        query.appendingQueryParameter(key: "pageToken", value: pageToken)
+        query.appendingQueryParameter(key: "publishedAfter", value: publishedAfter)
+        query.appendingQueryParameter(key: "publishedBefore", value: publishedBefore)
+        query.appendingQueryParameter(key: "regionCode", value: regionCode)
+        query.appendingQueryParameter(key: "safeSearch", value: safeSearch)
+        query.appendingQueryParameter(key: "videoCaption", value: videoCaption)
+        query.appendingQueryParameter(key: "videoDefinition", value: videoDefinition)
+        query.appendingQueryParameter(key: "videoDimension", value: videoDimension)
+        query.appendingQueryParameter(key: "videoDuration", value: videoDuration)
+        query.appendingQueryParameter(key: "videoEmbeddable", value: videoEmbeddable)
+        query.appendingQueryParameter(key: "videoLicense", value: videoLicense)
+        query.appendingQueryParameter(key: "videoSyndicated", value: videoSyndicated)
+        query.appendingQueryParameter(key: "videoType", value: videoType)
         
-        return q
+        return query
     }
     
     // MARK: - Required parameters

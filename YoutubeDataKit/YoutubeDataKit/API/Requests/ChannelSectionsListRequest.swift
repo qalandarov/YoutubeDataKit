@@ -32,16 +32,16 @@ public struct ChannelSectionsListRequest: Requestable {
     }
     
     public var queryParameters: [String : Any] {
-        var q: [String: Any] = [:]
+        var query: [String: Any] = [:]
         let part = self.part
             .map { $0.rawValue }
             .joined(separator: ",")
-        q.appendingQueryParameter(key: "part", value: part)
+        query.appendingQueryParameter(key: "part", value: part)
         let filterParam = filter.keyValue
-        q[filterParam.key] = filterParam.value
-        q.appendingQueryParameter(key: "hl", value: hl)
-        q.appendingQueryParameter(key: "onBehalfOfContentOwner", value: onBehalfOfContentOwner)
-        return q
+        query[filterParam.key] = filterParam.value
+        query.appendingQueryParameter(key: "hl", value: hl)
+        query.appendingQueryParameter(key: "onBehalfOfContentOwner", value: onBehalfOfContentOwner)
+        return query
     }
 
     // MARK: - Required parameters

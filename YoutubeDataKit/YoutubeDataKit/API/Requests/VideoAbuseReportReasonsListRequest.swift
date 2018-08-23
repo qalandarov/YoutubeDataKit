@@ -25,13 +25,13 @@ public struct VideoAbuseReportReasonsListRequest: Requestable {
     }
     
     public var queryParameters: [String : Any] {
-        var q: [String: Any] = [:]
+        var query: [String: Any] = [:]
         let part = self.part
             .map { $0.rawValue }
             .joined(separator: ",")
-        q.appendingQueryParameter(key: "part", value: part)
-        q.appendingQueryParameter(key: "hl", value: hl)
-        return q
+        query.appendingQueryParameter(key: "part", value: part)
+        query.appendingQueryParameter(key: "hl", value: hl)
+        return query
     }
     
     // MARK: - Required parameters

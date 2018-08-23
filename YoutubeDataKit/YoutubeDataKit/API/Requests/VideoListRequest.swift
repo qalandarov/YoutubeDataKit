@@ -30,19 +30,19 @@ public struct VideoListRequest: Requestable {
     }
     
     public var queryParameters: [String : Any] {
-        var q: [String: Any] = [:]
+        var query: [String: Any] = [:]
         let part = self.part
             .map { $0.rawValue }
             .joined(separator: ",")
-        q.appendingQueryParameter(key: "part", value: part)
+        query.appendingQueryParameter(key: "part", value: part)
         let filterParam = filter.keyValue
-        q[filterParam.key] = filterParam.value
-        q.appendingQueryParameter(key: "maxResults", value: maxResults)
-        q.appendingQueryParameter(key: "onBehalfOfContentOwner", value: onBehalfOfContentOwner)
-        q.appendingQueryParameter(key: "pageToken", value: pageToken)
-        q.appendingQueryParameter(key: "regionCode", value: regionCode)
-        q.appendingQueryParameter(key: "videoCategoryID", value: videoCategoryID)
-        return q
+        query[filterParam.key] = filterParam.value
+        query.appendingQueryParameter(key: "maxResults", value: maxResults)
+        query.appendingQueryParameter(key: "onBehalfOfContentOwner", value: onBehalfOfContentOwner)
+        query.appendingQueryParameter(key: "pageToken", value: pageToken)
+        query.appendingQueryParameter(key: "regionCode", value: regionCode)
+        query.appendingQueryParameter(key: "videoCategoryID", value: videoCategoryID)
+        return query
     }
 
     // MARK: - Required parameters
