@@ -138,7 +138,7 @@ extension Snippet {
 
 extension Snippet {
     public struct I18nRegionsList: Codable {
-        public let gl: String
+        public let hl: String
         public let name: String
     }
 }
