@@ -22,7 +22,7 @@ public struct CaptionListRequest: Requestable {
         return true
     }
     
-    public var queryParameters: [String : Any] {
+    public var queryParameters: [String: Any] {
         var query: [String: Any] = [:]
         let part = self.part
             .map { $0.rawValue }

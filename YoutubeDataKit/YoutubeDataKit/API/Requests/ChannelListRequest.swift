@@ -35,7 +35,7 @@ public struct ChannelListRequest: Requestable {
         }
     }
     
-    public var queryParameters: [String : Any] {
+    public var queryParameters: [String: Any] {
         var query: [String: Any] = [:]
         let part = self.part
             .map { $0.rawValue }
