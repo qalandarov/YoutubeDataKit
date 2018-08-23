@@ -50,4 +50,3 @@ public struct GuideCategoriesListRequest: Requestable {
         self.hl = hl
     }
 }
-
