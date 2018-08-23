@@ -20,17 +20,17 @@ public struct VideoCategoriesListRequest: Requestable {
         return .get
     }
     
-    public var queryParameters: [String : Any] {
-        var q: [String: Any] = [:]
+    public var queryParameters: [String: Any] {
+        var query: [String: Any] = [:]
         let part = self.part
             .map { $0.rawValue }
             .joined(separator: ",")
-        q.appendingQueryParameter(key: "part", value: part)
-        q.appendingQueryParameter(key: "hl", value: hl)
+        query.appendingQueryParameter(key: "part", value: part)
+        query.appendingQueryParameter(key: "hl", value: hl)
 
         let filterParam = filter.keyValue
-        q[filterParam.key] = filterParam.value
-        return q
+        query[filterParam.key] = filterParam.value
+        return query
     }
     
     // MARK: - Required parameters

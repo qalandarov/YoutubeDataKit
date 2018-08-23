@@ -32,10 +32,12 @@ extension ResourceID {
         public let channelID: String
         public let kind: String
         
+        //swiftlint:disable nesting
         public enum CodingKeys: String, CodingKey {
             case channelID = "channelId"
             case kind = "kind"
         }
+        //swiftlint:enable nesting
     }
 }
 
@@ -44,9 +46,11 @@ extension ResourceID {
         public let kind: String
         public let videoID: String
         
+        //swiftlint:disable nesting
         public enum CodingKeys: String, CodingKey {
             case kind = "kind"
             case videoID = "videoId"
         }
+        //swiftlint:enable nesting
     }
 }

@@ -22,31 +22,31 @@ public struct PlaylistsListRequest: Requestable {
     
     public var isAuthorizedRequest: Bool {
         switch filter {
-        case .channelID(_):
+        case .channelID:
             return false
-        case .id(_):
+        case .id:
             return false
-        case .mine(_):
+        case .mine:
             return true
         }
     }
     
-    public var queryParameters: [String : Any] {
-        var q: [String: Any] = [:]
+    public var queryParameters: [String: Any] {
+        var query: [String: Any] = [:]
         let part = self.part
             .map { $0.rawValue }
             .joined(separator: ",")
-        q.appendingQueryParameter(key: "part", value: part)
+        query.appendingQueryParameter(key: "part", value: part)
         
         let filterParam = filter.keyValue
-        q[filterParam.key] = filterParam.value
+        query[filterParam.key] = filterParam.value
         
-        q.appendingQueryParameter(key: "maxResults", value: maxResults)
-        q.appendingQueryParameter(key: "onBehalfOfContentOwner", value: onBehalfOfContentOwner)
-        q.appendingQueryParameter(key: "onBehalfOfContentOwnerChannel", value: onBehalfOfContentOwnerChannel)
-        q.appendingQueryParameter(key: "pageToken", value: pageToken)
+        query.appendingQueryParameter(key: "maxResults", value: maxResults)
+        query.appendingQueryParameter(key: "onBehalfOfContentOwner", value: onBehalfOfContentOwner)
+        query.appendingQueryParameter(key: "onBehalfOfContentOwnerChannel", value: onBehalfOfContentOwnerChannel)
+        query.appendingQueryParameter(key: "pageToken", value: pageToken)
         
-        return q
+        return query
     }
     
     // MARK: - Required parameters

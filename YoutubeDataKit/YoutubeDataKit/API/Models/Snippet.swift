@@ -5,6 +5,9 @@
 //  Created by Ryo Ishikawa on 12/30/2017
 //
 
+// swiftlint:disable nesting
+// so it doesn't complain about CodingKeys
+
 // MARK: - Namespace
 public enum Snippet {}
 
@@ -135,7 +138,7 @@ extension Snippet {
 
 extension Snippet {
     public struct I18nRegionsList: Codable {
-        public let gl: String
+        public let hl: String
         public let name: String
     }
 }
