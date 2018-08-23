@@ -22,13 +22,13 @@ public struct SubscriptionsListRequest: Requestable {
     
     public var isAuthorizedRequest: Bool {
         switch filter {
-        case .channelID(_):
+        case .channelID:
             return false
-        case .id(_):
+        case .id:
             return false
-        case .mine(_):
+        case .mine:
             return true
-        case .mySubscriptions(_):
+        case .mySubscriptions:
             return true
         }
     }

@@ -22,9 +22,9 @@ public struct VideoListRequest: Requestable {
         switch filter {
         case .chart:
             return false
-        case .id(_):
+        case .id:
             return false
-        case .myRating(_):
+        case .myRating:
             return true
         }
     }

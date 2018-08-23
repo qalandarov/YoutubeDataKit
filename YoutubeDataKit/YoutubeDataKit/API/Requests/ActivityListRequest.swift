@@ -20,11 +20,11 @@ public struct ActivityListRequest: Requestable {
     
     public var isAuthorizedRequest: Bool {
         switch filter {
-        case .channelID(_):
+        case .channelID:
             return false
-        case .home(_):
+        case .home:
             return true
-        case .mine(_):
+        case .mine:
             return true
         }
     }

@@ -22,15 +22,15 @@ public struct ChannelListRequest: Requestable {
     
     public var isAuthorizedRequest: Bool {
         switch filter {
-        case .categoryID(_):
+        case .categoryID:
             return false
-        case .id(_):
+        case .id:
             return false
-        case .managedByMe(_):
+        case .managedByMe:
             return true
-        case .mine(_):
+        case .mine:
             return true
-        case .userName(_):
+        case .userName:
             return false
         }
     }

@@ -21,14 +21,14 @@ public struct SearchListRequest: Requestable {
     }
     
     public var isAuthorizedRequest: Bool {
+        guard let filter = filter else { return false }
+        
         switch filter {
-        case .forContentOwner(_)?:
+        case .forContentOwner:
             return true
-        case .forMine(_)?:
+        case .forMine:
             return true
-        case .relatedToVideoID(_)?:
-            return false
-        case .none:
+        case .relatedToVideoID:
             return false
         }
     }
