@@ -36,14 +36,8 @@ public class ApiSession {
                 let decoder = JSONDecoder()
                 let result = try decoder.decode(T.Response.self, from: data)
                 closure(.success(result))
-            } catch DecodingError.keyNotFound(let codingKey, let context){
-                closure(.failed(DecodingError.keyNotFound(codingKey, context)))
-            } catch DecodingError.typeMismatch(let type, let context){
-                closure(.failed(DecodingError.typeMismatch(type, context)))
-            } catch DecodingError.valueNotFound(let type, let context) {
-                closure(.failed(DecodingError.valueNotFound(type, context)))
-            } catch DecodingError.dataCorrupted(let context) {
-                closure(.failed(DecodingError.dataCorrupted(context)))
+            } catch let error as DecodingError {
+                closure(.failed(error))
             } catch {
                 closure(.failed(ResponseError.unexpectedResponse(data)))
             }
