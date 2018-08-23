@@ -17,7 +17,7 @@ public class ApiSession {
         
         let urlRequest = request.makeURLRequest()
         
-        let task = URLSession.shared.dataTask(with: urlRequest) { (data, rawResponse, error) in
+        let task = URLSession.shared.dataTask(with: urlRequest) { (data, _, error) in
             
             // If the dataTask error is occured.
             if let error = error {
