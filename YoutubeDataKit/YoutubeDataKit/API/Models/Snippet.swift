@@ -5,6 +5,9 @@
 //  Created by Ryo Ishikawa on 12/30/2017
 //
 
+// swiftlint:disable nesting
+// so it doesn't complain about CodingKeys
+
 // MARK: - Namespace
 public enum Snippet {}
 
