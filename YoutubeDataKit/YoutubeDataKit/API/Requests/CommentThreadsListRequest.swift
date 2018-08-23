@@ -72,4 +72,3 @@ public struct CommentThreadsListRequest: Requestable {
         self.textFormat = textFormat
     }
 }
-

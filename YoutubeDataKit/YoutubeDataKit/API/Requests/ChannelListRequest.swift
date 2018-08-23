@@ -72,4 +72,3 @@ public struct ChannelListRequest: Requestable {
         self.pageToken = pageToken
     }
 }
-
