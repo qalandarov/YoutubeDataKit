@@ -4,15 +4,14 @@
 
 osx_image: xcode9
 language: objective-c
-# cache: cocoapods
-# podfile: Example/Podfile
-# before_install:
-# - gem install cocoapods # Since Travis is not always on latest version
-# - pod install --project-directory=Example
-install:
+
+before_install:
+# installing SwiftLint 0.27.0
 - wget --output-document /tmp/SwiftLint.pkg https://github.com/realm/SwiftLint/releases/download/0.27.0/SwiftLint.pkg &&
   sudo installer -pkg /tmp/SwiftLint.pkg -target /
+
 script:
+- set -e && swiftlint # `set -e` is to fail fast if the linting fails
 - set -o pipefail && xcodebuild -workspace YoutubeDataKit.xcworkspace -scheme YoutubeDataKit -destination 'platform=iOS Simulator,name=iPhone SE,OS=9.3' | xcpretty
 - set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace YoutubeDataKit.xcworkspace -scheme YoutubeDataKitTests -destination 'platform=iOS Simulator,name=iPhone SE,OS=9.3' | xcpretty
 - pod lib lint
