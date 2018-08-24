@@ -52,7 +52,7 @@
 		A66598AD212B542900732791 /* Snippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6659864212B542800732791 /* Snippet.swift */; };
 		A66598AE212B542900732791 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6659865212B542800732791 /* Statistics.swift */; };
 		A66598AF212B542900732791 /* SubscriptionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6659866212B542800732791 /* SubscriptionsList.swift */; };
-		A66598B0212B542900732791 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6659867212B542800732791 /* Thumbnail.swift */; };
+		A66598B0212B542900732791 /* Thumbnails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6659867212B542800732791 /* Thumbnails.swift */; };
 		A66598B1212B542900732791 /* VideoAbuseReportReasonsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6659868212B542800732791 /* VideoAbuseReportReasonsList.swift */; };
 		A66598B2212B542900732791 /* VideoCategoriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6659869212B542800732791 /* VideoCategoriesList.swift */; };
 		A66598B3212B542900732791 /* VideoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A665986A212B542800732791 /* VideoList.swift */; };
@@ -142,7 +142,7 @@
 		A6659864212B542800732791 /* Snippet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snippet.swift; sourceTree = "<group>"; };
 		A6659865212B542800732791 /* Statistics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		A6659866212B542800732791 /* SubscriptionsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionsList.swift; sourceTree = "<group>"; };
-		A6659867212B542800732791 /* Thumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
+		A6659867212B542800732791 /* Thumbnails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thumbnails.swift; sourceTree = "<group>"; };
 		A6659868212B542800732791 /* VideoAbuseReportReasonsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoAbuseReportReasonsList.swift; sourceTree = "<group>"; };
 		A6659869212B542800732791 /* VideoCategoriesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCategoriesList.swift; sourceTree = "<group>"; };
 		A665986A212B542800732791 /* VideoList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoList.swift; sourceTree = "<group>"; };
@@ -303,7 +303,7 @@
 				A6659864212B542800732791 /* Snippet.swift */,
 				A6659865212B542800732791 /* Statistics.swift */,
 				A6659866212B542800732791 /* SubscriptionsList.swift */,
-				A6659867212B542800732791 /* Thumbnail.swift */,
+				A6659867212B542800732791 /* Thumbnails.swift */,
 				A6659868212B542800732791 /* VideoAbuseReportReasonsList.swift */,
 				A6659869212B542800732791 /* VideoCategoriesList.swift */,
 				A665986A212B542800732791 /* VideoList.swift */,
@@ -514,7 +514,7 @@
 				A66598B1212B542900732791 /* VideoAbuseReportReasonsList.swift in Sources */,
 				A66598A4212B542900732791 /* GuideCategoriesList.swift in Sources */,
 				A665989F212B542900732791 /* ChannelList.swift in Sources */,
-				A66598B0212B542900732791 /* Thumbnail.swift in Sources */,
+				A66598B0212B542900732791 /* Thumbnails.swift in Sources */,
 				A66598B7212B542900732791 /* CaptionListRequest.swift in Sources */,
 				A66598BE212B542900732791 /* I18nRegionsListRequest.swift in Sources */,
 				A665988A212B542900732791 /* CommentModerationStatus.swift in Sources */,

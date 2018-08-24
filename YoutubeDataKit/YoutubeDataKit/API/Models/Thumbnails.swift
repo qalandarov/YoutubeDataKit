@@ -1,5 +1,5 @@
 //
-//  Thumbnail.swift
+//  Thumbnails.swift
 //  YoutubeKit
 //
 //  Created by Ryo Ishikawa on 12/30/2017
