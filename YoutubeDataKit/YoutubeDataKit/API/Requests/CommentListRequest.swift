@@ -22,12 +22,10 @@ public struct CommentListRequest: Requestable {
     
     public var queryParameters: [String: Any] {
         var query: [String: Any] = ["part": part.toCSV()]
-        
         query.appendingQueryFilter(filter)
         query.appendingQueryParameter(key: "maxResults", value: maxResults)
         query.appendingQueryParameter(key: "pageToken", value: pageToken)
         query.appendingQueryParameter(key: "textFormat", value: textFormat)
-        
         return query
     }
     

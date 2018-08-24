@@ -33,13 +33,11 @@ public struct PlaylistsListRequest: Requestable {
     
     public var queryParameters: [String: Any] {
         var query: [String: Any] = ["part": part.toCSV()]
-        
         query.appendingQueryFilter(filter)
         query.appendingQueryParameter(key: "maxResults", value: maxResults)
         query.appendingQueryParameter(key: "onBehalfOfContentOwner", value: onBehalfOfContentOwner)
         query.appendingQueryParameter(key: "onBehalfOfContentOwnerChannel", value: onBehalfOfContentOwnerChannel)
         query.appendingQueryParameter(key: "pageToken", value: pageToken)
-        
         return query
     }
     
