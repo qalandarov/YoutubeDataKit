@@ -21,15 +21,9 @@ public struct VideoCategoriesListRequest: Requestable {
     }
     
     public var queryParameters: [String: Any] {
-        var query: [String: Any] = [:]
-        let part = self.part
-            .map { $0.rawValue }
-            .joined(separator: ",")
-        query.appendingQueryParameter(key: "part", value: part)
+        var query: [String: Any] = ["part": part.toCSV()]
+        query.appendingQueryFilter(filter)
         query.appendingQueryParameter(key: "hl", value: hl)
-
-        let filterParam = filter.keyValue
-        query[filterParam.key] = filterParam.value
         return query
     }
     

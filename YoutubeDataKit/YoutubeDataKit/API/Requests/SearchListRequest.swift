@@ -34,16 +34,8 @@ public struct SearchListRequest: Requestable {
     }
     
     public var queryParameters: [String: Any] {
-        var query: [String: Any] = [:]
-        let part = self.part
-            .map { $0.rawValue }
-            .joined(separator: ",")
-        query.appendingQueryParameter(key: "part", value: part)
-
-        if let filterParam = filter?.keyValue {
-            query[filterParam.key] = filterParam.value
-        }
-        
+        var query: [String: Any] = ["part": part.toCSV()]
+        query.appendingQueryFilter(filter)
         query.appendingQueryParameter(key: "channelId", value: channelID)
         query.appendingQueryParameter(key: "q", value: searchQuery)
         query.appendingQueryParameter(key: "topicId", value: topicID)
@@ -67,7 +59,6 @@ public struct SearchListRequest: Requestable {
         query.appendingQueryParameter(key: "videoLicense", value: videoLicense)
         query.appendingQueryParameter(key: "videoSyndicated", value: videoSyndicated)
         query.appendingQueryParameter(key: "videoType", value: videoType)
-        
         return query
     }
     

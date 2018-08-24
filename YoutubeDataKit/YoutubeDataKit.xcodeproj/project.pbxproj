@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A639F161212FA8EC005AB87A /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A639F160212FA8EC005AB87A /* Array+Extensions.swift */; };
 		A6659792212B539E00732791 /* YoutubeDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6659788212B539E00732791 /* YoutubeDataKit.framework */; };
 		A6659797212B539E00732791 /* YoutubeDataKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6659796212B539E00732791 /* YoutubeDataKitTests.swift */; };
 		A6659799212B539E00732791 /* YoutubeDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A665978B212B539E00732791 /* YoutubeDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -93,6 +94,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A639F160212FA8EC005AB87A /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		A6659788212B539E00732791 /* YoutubeDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YoutubeDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A665978B212B539E00732791 /* YoutubeDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YoutubeDataKit.h; sourceTree = "<group>"; };
 		A665978C212B539E00732791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				A6659883212B542900732791 /* BoolExtensions.swift */,
+				A639F160212FA8EC005AB87A /* Array+Extensions.swift */,
 				A6659884212B542900732791 /* DictionaryExtensions.swift */,
 				A6659885212B542900732791 /* RequestableExtensions.swift */,
 			);
@@ -527,6 +530,7 @@
 				A66598BA212B542900732791 /* CommentListRequest.swift in Sources */,
 				A665989D212B542900732791 /* ActivityList.swift in Sources */,
 				A66598C4212B542900732791 /* VideoCategoryListRequest.swift in Sources */,
+				A639F161212FA8EC005AB87A /* Array+Extensions.swift in Sources */,
 				A66598A5212B542900732791 /* I18nLanguagesList.swift in Sources */,
 				A66598A9212B542900732791 /* PlaylistItemsList.swift in Sources */,
 				A665989A212B542900732791 /* SearchVideoType.swift in Sources */,

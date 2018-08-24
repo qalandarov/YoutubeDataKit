@@ -25,11 +25,7 @@ public struct VideoAbuseReportReasonsListRequest: Requestable {
     }
     
     public var queryParameters: [String: Any] {
-        var query: [String: Any] = [:]
-        let part = self.part
-            .map { $0.rawValue }
-            .joined(separator: ",")
-        query.appendingQueryParameter(key: "part", value: part)
+        var query: [String: Any] = ["part": part.toCSV()]
         query.appendingQueryParameter(key: "hl", value: hl)
         return query
     }

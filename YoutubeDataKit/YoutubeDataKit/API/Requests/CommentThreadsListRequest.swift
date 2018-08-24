@@ -21,22 +21,14 @@ public struct CommentThreadsListRequest: Requestable {
     }
     
     public var queryParameters: [String: Any] {
-        var query: [String: Any] = [:]
-        let part = self.part
-            .map { $0.rawValue }
-            .joined(separator: ",")
-        query.appendingQueryParameter(key: "part", value: part)
-        
-        let filterParam = filter.keyValue
-        query[filterParam.key] = filterParam.value
-        
+        var query: [String: Any] = ["part": part.toCSV()]
+        query.appendingQueryFilter(filter)
         query.appendingQueryParameter(key: "maxResults", value: maxResults)
         query.appendingQueryParameter(key: "moderationStatus", value: moderationStatus)
         query.appendingQueryParameter(key: "order", value: order)
         query.appendingQueryParameter(key: "pageToken", value: pageToken)
         query.appendingQueryParameter(key: "searchTerms", value: searchTerms)
         query.appendingQueryParameter(key: "textFormat", value: textFormat)
-        
         return query
     }
     
