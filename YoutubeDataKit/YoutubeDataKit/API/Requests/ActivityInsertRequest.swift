@@ -23,12 +23,7 @@ public struct ActivityInsertRequest: Requestable {
     }
     
     public var queryParameters: [String: Any] {
-        var query: [String: Any] = [:]
-        let part = self.part
-            .map { $0.rawValue }
-            .joined(separator: ",")
-        query.appendingQueryParameter(key: "part", value: part)
-        return query
+        return ["part": part.toCSV()]
     }
     
     public var httpBody: Data? {

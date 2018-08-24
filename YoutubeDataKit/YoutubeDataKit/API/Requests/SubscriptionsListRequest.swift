@@ -34,11 +34,7 @@ public struct SubscriptionsListRequest: Requestable {
     }
     
     public var queryParameters: [String: Any] {
-        var query: [String: Any] = [:]
-        let part = self.part
-            .map { $0.rawValue }
-            .joined(separator: ",")
-        query.appendingQueryParameter(key: "part", value: part)
+        var query: [String: Any] = ["part": part.toCSV()]
         
         let filterParam = filter.keyValue
         query[filterParam.key] = filterParam.value
