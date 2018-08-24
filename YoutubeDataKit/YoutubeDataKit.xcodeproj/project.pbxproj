@@ -247,11 +247,11 @@
 			isa = PBXGroup;
 			children = (
 				A665983E212B542800732791 /* ApiSession.swift */,
-				A665983F212B542800732791 /* Constants */,
 				A6659852212B542800732791 /* HTTPMethod.swift */,
-				A6659853212B542800732791 /* Models */,
 				A665986B212B542800732791 /* Requestable.swift */,
 				A665986C212B542800732791 /* Requests */,
+				A6659853212B542800732791 /* Models */,
+				A665983F212B542800732791 /* Constants */,
 			);
 			path = API;
 			sourceTree = "<group>";
