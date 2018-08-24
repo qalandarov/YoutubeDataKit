@@ -20,21 +20,21 @@ public struct CommentListRequest: Requestable {
         return .get
     }
     
-    public var queryParameters: [String: Any] {
-        var query: [String: Any] = [:]
+    public var queryParameters: [String : Any] {
+        var q: [String: Any] = [:]
         let part = self.part
             .map { $0.rawValue }
             .joined(separator: ",")
-        query.appendingQueryParameter(key: "part", value: part)
+        q.appendingQueryParameter(key: "part", value: part)
         
         let filterParam = filter.keyValue
-        query[filterParam.key] = filterParam.value
+        q[filterParam.key] = filterParam.value
         
-        query.appendingQueryParameter(key: "maxResults", value: maxResults)
-        query.appendingQueryParameter(key: "pageToken", value: pageToken)
-        query.appendingQueryParameter(key: "textFormat", value: textFormat)
+        q.appendingQueryParameter(key: "maxResults", value: maxResults)
+        q.appendingQueryParameter(key: "pageToken", value: pageToken)
+        q.appendingQueryParameter(key: "textFormat", value: textFormat)
         
-        return query
+        return q
     }
     
     // MARK: - Required parameters

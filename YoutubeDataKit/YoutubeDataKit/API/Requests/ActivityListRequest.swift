@@ -20,29 +20,29 @@ public struct ActivityListRequest: Requestable {
     
     public var isAuthorizedRequest: Bool {
         switch filter {
-        case .channelID:
+        case .channelID(_):
             return false
-        case .home:
+        case .home(_):
             return true
-        case .mine:
+        case .mine(_):
             return true
         }
     }
     
     public var queryParameters: [String: Any] {
-        var query: [String: Any] = [:]
+        var q: [String: Any] = [:]
         let part = self.part
             .map { $0.rawValue }
             .joined(separator: ",")
-        query.appendingQueryParameter(key: "part", value: part)
+        q.appendingQueryParameter(key: "part", value: part)
         let filterParam = filter.keyValue
-        query[filterParam.key] = filterParam.value
-        query.appendingQueryParameter(key: "maxResults", value: maxResults)
-        query.appendingQueryParameter(key: "pageToken", value: pageToken)
-        query.appendingQueryParameter(key: "publishedAfter", value: publishedAfter)
-        query.appendingQueryParameter(key: "publishedBefore", value: publishedBefore)
-        query.appendingQueryParameter(key: "regionCode", value: regionCode)
-        return query
+        q[filterParam.key] = filterParam.value
+        q.appendingQueryParameter(key: "maxResults", value: maxResults)
+        q.appendingQueryParameter(key: "pageToken", value: pageToken)
+        q.appendingQueryParameter(key: "publishedAfter", value: publishedAfter)
+        q.appendingQueryParameter(key: "publishedBefore", value: publishedBefore)
+        q.appendingQueryParameter(key: "regionCode", value: regionCode)
+        return q
     }
     
     // MARK: - Required parameters
