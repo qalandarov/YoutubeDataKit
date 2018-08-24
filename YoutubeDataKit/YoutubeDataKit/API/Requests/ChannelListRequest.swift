@@ -22,31 +22,31 @@ public struct ChannelListRequest: Requestable {
     
     public var isAuthorizedRequest: Bool {
         switch filter {
-        case .categoryID(_):
+        case .categoryID:
             return false
-        case .id(_):
+        case .id:
             return false
-        case .managedByMe(_):
+        case .managedByMe:
             return true
-        case .mine(_):
+        case .mine:
             return true
-        case .userName(_):
+        case .userName:
             return false
         }
     }
     
-    public var queryParameters: [String : Any] {
-        var q: [String: Any] = [:]
+    public var queryParameters: [String: Any] {
+        var query: [String: Any] = [:]
         let part = self.part
             .map { $0.rawValue }
             .joined(separator: ",")
-        q.appendingQueryParameter(key: "part", value: part)
+        query.appendingQueryParameter(key: "part", value: part)
         let filterParam = filter.keyValue
-        q[filterParam.key] = filterParam.value
-        q.appendingQueryParameter(key: "maxResult", value: maxResult)
-        q.appendingQueryParameter(key: "onBehalfOfContentOwner", value: onBehalfOfContentOwner)
-        q.appendingQueryParameter(key: "pageToken", value: pageToken)
-        return q
+        query[filterParam.key] = filterParam.value
+        query.appendingQueryParameter(key: "maxResult", value: maxResult)
+        query.appendingQueryParameter(key: "onBehalfOfContentOwner", value: onBehalfOfContentOwner)
+        query.appendingQueryParameter(key: "pageToken", value: pageToken)
+        return query
     }
 
     // MARK: - Required parameters
@@ -72,4 +72,3 @@ public struct ChannelListRequest: Requestable {
         self.pageToken = pageToken
     }
 }
-

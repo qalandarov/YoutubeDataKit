@@ -50,9 +50,11 @@ extension ContentDetails {
         public let videoID: String
         public let videoPublishedAt: String
         
+        //swiftlint:disable nesting
         public enum CodingKeys: String, CodingKey {
             case videoID = "videoId"
             case videoPublishedAt = "videoPublishedAt"
         }
+        //swiftlint:enable nesting
     }
 }
