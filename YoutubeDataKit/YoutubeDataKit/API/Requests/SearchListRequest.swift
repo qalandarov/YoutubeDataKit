@@ -36,10 +36,7 @@ public struct SearchListRequest: Requestable {
     public var queryParameters: [String: Any] {
         var query: [String: Any] = ["part": part.toCSV()]
         
-        if let filterParam = filter?.keyValue {
-            query[filterParam.key] = filterParam.value
-        }
-        
+        query.appendingQueryFilter(filter)
         query.appendingQueryParameter(key: "channelId", value: channelID)
         query.appendingQueryParameter(key: "q", value: searchQuery)
         query.appendingQueryParameter(key: "topicId", value: topicID)

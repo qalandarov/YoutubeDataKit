@@ -33,8 +33,7 @@ public struct ChannelSectionsListRequest: Requestable {
     
     public var queryParameters: [String: Any] {
         var query: [String: Any] = ["part": part.toCSV()]
-        let filterParam = filter.keyValue
-        query[filterParam.key] = filterParam.value
+        query.appendingQueryFilter(filter)
         query.appendingQueryParameter(key: "hl", value: hl)
         query.appendingQueryParameter(key: "onBehalfOfContentOwner", value: onBehalfOfContentOwner)
         return query

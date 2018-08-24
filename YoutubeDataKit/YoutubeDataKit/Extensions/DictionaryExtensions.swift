@@ -17,4 +17,10 @@ extension Dictionary where Key == String, Value == Any {
             self[key] = value.rawValue
         }
     }
+    
+    mutating func appendingQueryFilter(_ filter: QueryParameterable?) {
+        if let filterParam = filter?.keyValue {
+            self[filterParam.key] = filterParam.value
+        }
+    }
 }

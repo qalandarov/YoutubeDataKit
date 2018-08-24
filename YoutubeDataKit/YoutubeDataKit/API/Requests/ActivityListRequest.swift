@@ -31,8 +31,7 @@ public struct ActivityListRequest: Requestable {
     
     public var queryParameters: [String: Any] {
         var query: [String: Any] = ["part": part.toCSV()]
-        let filterParam = filter.keyValue
-        query[filterParam.key] = filterParam.value
+        query.appendingQueryFilter(filter)
         query.appendingQueryParameter(key: "maxResults", value: maxResults)
         query.appendingQueryParameter(key: "pageToken", value: pageToken)
         query.appendingQueryParameter(key: "publishedAfter", value: publishedAfter)
