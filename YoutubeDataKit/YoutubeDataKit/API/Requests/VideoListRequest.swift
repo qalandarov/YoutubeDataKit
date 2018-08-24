@@ -22,27 +22,27 @@ public struct VideoListRequest: Requestable {
         switch filter {
         case .chart:
             return false
-        case .id:
+        case .id(_):
             return false
-        case .myRating:
+        case .myRating(_):
             return true
         }
     }
     
-    public var queryParameters: [String: Any] {
-        var query: [String: Any] = [:]
+    public var queryParameters: [String : Any] {
+        var q: [String: Any] = [:]
         let part = self.part
             .map { $0.rawValue }
             .joined(separator: ",")
-        query.appendingQueryParameter(key: "part", value: part)
+        q.appendingQueryParameter(key: "part", value: part)
         let filterParam = filter.keyValue
-        query[filterParam.key] = filterParam.value
-        query.appendingQueryParameter(key: "maxResults", value: maxResults)
-        query.appendingQueryParameter(key: "onBehalfOfContentOwner", value: onBehalfOfContentOwner)
-        query.appendingQueryParameter(key: "pageToken", value: pageToken)
-        query.appendingQueryParameter(key: "regionCode", value: regionCode)
-        query.appendingQueryParameter(key: "videoCategoryID", value: videoCategoryID)
-        return query
+        q[filterParam.key] = filterParam.value
+        q.appendingQueryParameter(key: "maxResults", value: maxResults)
+        q.appendingQueryParameter(key: "onBehalfOfContentOwner", value: onBehalfOfContentOwner)
+        q.appendingQueryParameter(key: "pageToken", value: pageToken)
+        q.appendingQueryParameter(key: "regionCode", value: regionCode)
+        q.appendingQueryParameter(key: "videoCategoryID", value: videoCategoryID)
+        return q
     }
 
     // MARK: - Required parameters

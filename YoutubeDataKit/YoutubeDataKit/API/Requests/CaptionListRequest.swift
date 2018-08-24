@@ -22,16 +22,16 @@ public struct CaptionListRequest: Requestable {
         return true
     }
     
-    public var queryParameters: [String: Any] {
-        var query: [String: Any] = [:]
+    public var queryParameters: [String : Any] {
+        var q: [String: Any] = [:]
         let part = self.part
             .map { $0.rawValue }
             .joined(separator: ",")
-        query.appendingQueryParameter(key: "part", value: part)
-        query.appendingQueryParameter(key: "videoId", value: videoID)
-        query.appendingQueryParameter(key: "id", value: id)
-        query.appendingQueryParameter(key: "onBehalfOfContentOwner", value: onBehalfOfContentOwner)
-        return query
+        q.appendingQueryParameter(key: "part", value: part)
+        q.appendingQueryParameter(key: "videoId", value: videoID)
+        q.appendingQueryParameter(key: "id", value: id)
+        q.appendingQueryParameter(key: "onBehalfOfContentOwner", value: onBehalfOfContentOwner)
+        return q
     }
     
     // MARK: - Required parameters

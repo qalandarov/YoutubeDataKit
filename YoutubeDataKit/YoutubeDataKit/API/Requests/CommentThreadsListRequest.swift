@@ -20,24 +20,24 @@ public struct CommentThreadsListRequest: Requestable {
         return .get
     }
     
-    public var queryParameters: [String: Any] {
-        var query: [String: Any] = [:]
+    public var queryParameters: [String : Any] {
+        var q: [String: Any] = [:]
         let part = self.part
             .map { $0.rawValue }
             .joined(separator: ",")
-        query.appendingQueryParameter(key: "part", value: part)
+        q.appendingQueryParameter(key: "part", value: part)
         
         let filterParam = filter.keyValue
-        query[filterParam.key] = filterParam.value
+        q[filterParam.key] = filterParam.value
         
-        query.appendingQueryParameter(key: "maxResults", value: maxResults)
-        query.appendingQueryParameter(key: "moderationStatus", value: moderationStatus)
-        query.appendingQueryParameter(key: "order", value: order)
-        query.appendingQueryParameter(key: "pageToken", value: pageToken)
-        query.appendingQueryParameter(key: "searchTerms", value: searchTerms)
-        query.appendingQueryParameter(key: "textFormat", value: textFormat)
+        q.appendingQueryParameter(key: "maxResults", value: maxResults)
+        q.appendingQueryParameter(key: "moderationStatus", value: moderationStatus)
+        q.appendingQueryParameter(key: "order", value: order)
+        q.appendingQueryParameter(key: "pageToken", value: pageToken)
+        q.appendingQueryParameter(key: "searchTerms", value: searchTerms)
+        q.appendingQueryParameter(key: "textFormat", value: textFormat)
         
-        return query
+        return q
     }
     
     // MARK: - Required parameters
@@ -72,3 +72,4 @@ public struct CommentThreadsListRequest: Requestable {
         self.textFormat = textFormat
     }
 }
+

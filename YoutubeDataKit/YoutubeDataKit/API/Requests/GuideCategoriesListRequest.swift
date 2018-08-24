@@ -20,17 +20,17 @@ public struct GuideCategoriesListRequest: Requestable {
         return .get
     }
     
-    public var queryParameters: [String: Any] {
-        var query: [String: Any] = [:]
+    public var queryParameters: [String : Any] {
+        var q: [String: Any] = [:]
         let part = self.part
             .map { $0.rawValue }
             .joined(separator: ",")
-        query.appendingQueryParameter(key: "part", value: part)
-        query.appendingQueryParameter(key: "hl", value: hl)
+        q.appendingQueryParameter(key: "part", value: part)
+        q.appendingQueryParameter(key: "hl", value: hl)
         
         let filterParam = filter.keyValue
-        query[filterParam.key] = filterParam.value
-        return query
+        q[filterParam.key] = filterParam.value
+        return q
     }
     
     // MARK: - Required parameters
@@ -50,3 +50,4 @@ public struct GuideCategoriesListRequest: Requestable {
         self.hl = hl
     }
 }
+

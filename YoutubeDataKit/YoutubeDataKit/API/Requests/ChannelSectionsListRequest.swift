@@ -22,26 +22,26 @@ public struct ChannelSectionsListRequest: Requestable {
     
     public var isAuthorizedRequest: Bool {
         switch filter {
-        case .channelID:
+        case .channelID(_):
             return false
-        case .id:
+        case .id(_):
             return false
-        case .mine:
+        case .mine(_):
             return true
         }
     }
     
-    public var queryParameters: [String: Any] {
-        var query: [String: Any] = [:]
+    public var queryParameters: [String : Any] {
+        var q: [String: Any] = [:]
         let part = self.part
             .map { $0.rawValue }
             .joined(separator: ",")
-        query.appendingQueryParameter(key: "part", value: part)
+        q.appendingQueryParameter(key: "part", value: part)
         let filterParam = filter.keyValue
-        query[filterParam.key] = filterParam.value
-        query.appendingQueryParameter(key: "hl", value: hl)
-        query.appendingQueryParameter(key: "onBehalfOfContentOwner", value: onBehalfOfContentOwner)
-        return query
+        q[filterParam.key] = filterParam.value
+        q.appendingQueryParameter(key: "hl", value: hl)
+        q.appendingQueryParameter(key: "onBehalfOfContentOwner", value: onBehalfOfContentOwner)
+        return q
     }
 
     // MARK: - Required parameters

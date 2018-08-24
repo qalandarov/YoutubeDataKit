@@ -22,34 +22,34 @@ public struct SubscriptionsListRequest: Requestable {
     
     public var isAuthorizedRequest: Bool {
         switch filter {
-        case .channelID:
+        case .channelID(_):
             return false
-        case .id:
+        case .id(_):
             return false
-        case .mine:
+        case .mine(_):
             return true
-        case .mySubscriptions:
+        case .mySubscriptions(_):
             return true
         }
     }
     
-    public var queryParameters: [String: Any] {
-        var query: [String: Any] = [:]
+    public var queryParameters: [String : Any] {
+        var q: [String: Any] = [:]
         let part = self.part
             .map { $0.rawValue }
             .joined(separator: ",")
-        query.appendingQueryParameter(key: "part", value: part)
+        q.appendingQueryParameter(key: "part", value: part)
         
         let filterParam = filter.keyValue
-        query[filterParam.key] = filterParam.value
+        q[filterParam.key] = filterParam.value
         
-        query.appendingQueryParameter(key: "channelId", value: forChannelID)
-        query.appendingQueryParameter(key: "maxResults", value: maxResults)
-        query.appendingQueryParameter(key: "onBehalfOfContentOwner", value: onBehalfOfContentOwner)
-        query.appendingQueryParameter(key: "onBehalfOfContentOwnerChannel", value: onBehalfOfContentOwnerChannel)
-        query.appendingQueryParameter(key: "order", value: order)
-        query.appendingQueryParameter(key: "pageToken", value: pageToken)
-        return query
+        q.appendingQueryParameter(key: "channelId", value: forChannelID)
+        q.appendingQueryParameter(key: "maxResults", value: maxResults)
+        q.appendingQueryParameter(key: "onBehalfOfContentOwner", value: onBehalfOfContentOwner)
+        q.appendingQueryParameter(key: "onBehalfOfContentOwnerChannel", value: onBehalfOfContentOwnerChannel)
+        q.appendingQueryParameter(key: "order", value: order)
+        q.appendingQueryParameter(key: "pageToken", value: pageToken)
+        return q
     }
     
     // MARK: - Required parameters
