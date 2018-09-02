@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A639F161212FA8EC005AB87A /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A639F160212FA8EC005AB87A /* Array+Extensions.swift */; };
 		A6659792212B539E00732791 /* YoutubeDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6659788212B539E00732791 /* YoutubeDataKit.framework */; };
-		A6659797212B539E00732791 /* YoutubeDataKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6659796212B539E00732791 /* YoutubeDataKitTests.swift */; };
 		A6659799212B539E00732791 /* YoutubeDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A665978B212B539E00732791 /* YoutubeDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6659887212B542900732791 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A665983B212B542800732791 /* RequestError.swift */; };
 		A6659888212B542900732791 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A665983C212B542800732791 /* ResponseError.swift */; };
@@ -81,6 +80,15 @@
 		A66598CA212B542900732791 /* DictionaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6659884212B542900732791 /* DictionaryExtensions.swift */; };
 		A66598CB212B542900732791 /* RequestableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6659885212B542900732791 /* RequestableExtensions.swift */; };
 		A66598CC212B542900732791 /* YoutubeDataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6659886212B542900732791 /* YoutubeDataAPI.swift */; };
+		A6A87B5F213AEFA800F1BF6D /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A87B5E213AEFA800F1BF6D /* BaseTestCase.swift */; };
+		A6A87B64213AF0D200F1BF6D /* channel-list.json in Resources */ = {isa = PBXBuildFile; fileRef = A6A87B60213AF0D200F1BF6D /* channel-list.json */; };
+		A6A87B65213AF0D200F1BF6D /* channel-snippet.json in Resources */ = {isa = PBXBuildFile; fileRef = A6A87B61213AF0D200F1BF6D /* channel-snippet.json */; };
+		A6A87B66213AF0D200F1BF6D /* channel.json in Resources */ = {isa = PBXBuildFile; fileRef = A6A87B62213AF0D200F1BF6D /* channel.json */; };
+		A6A87B67213AF0D200F1BF6D /* channel-thumbnails.json in Resources */ = {isa = PBXBuildFile; fileRef = A6A87B63213AF0D200F1BF6D /* channel-thumbnails.json */; };
+		A6A87B74213B974100F1BF6D /* ChannelListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A87B70213B974100F1BF6D /* ChannelListTests.swift */; };
+		A6A87B75213B974100F1BF6D /* ChannelSnippetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A87B71213B974100F1BF6D /* ChannelSnippetTests.swift */; };
+		A6A87B76213B974100F1BF6D /* ChannelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A87B72213B974100F1BF6D /* ChannelTests.swift */; };
+		A6A87B77213B974100F1BF6D /* ChannelThumbnailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A87B73213B974100F1BF6D /* ChannelThumbnailsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +107,6 @@
 		A665978B212B539E00732791 /* YoutubeDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YoutubeDataKit.h; sourceTree = "<group>"; };
 		A665978C212B539E00732791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6659791212B539E00732791 /* YoutubeDataKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoutubeDataKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A6659796212B539E00732791 /* YoutubeDataKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeDataKitTests.swift; sourceTree = "<group>"; };
 		A6659798212B539E00732791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A665983B212B542800732791 /* RequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		A665983C212B542800732791 /* ResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
@@ -171,6 +178,15 @@
 		A6659884212B542900732791 /* DictionaryExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtensions.swift; sourceTree = "<group>"; };
 		A6659885212B542900732791 /* RequestableExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestableExtensions.swift; sourceTree = "<group>"; };
 		A6659886212B542900732791 /* YoutubeDataAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeDataAPI.swift; sourceTree = "<group>"; };
+		A6A87B5E213AEFA800F1BF6D /* BaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
+		A6A87B60213AF0D200F1BF6D /* channel-list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "channel-list.json"; sourceTree = "<group>"; };
+		A6A87B61213AF0D200F1BF6D /* channel-snippet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "channel-snippet.json"; sourceTree = "<group>"; };
+		A6A87B62213AF0D200F1BF6D /* channel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = channel.json; sourceTree = "<group>"; };
+		A6A87B63213AF0D200F1BF6D /* channel-thumbnails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "channel-thumbnails.json"; sourceTree = "<group>"; };
+		A6A87B70213B974100F1BF6D /* ChannelListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelListTests.swift; sourceTree = "<group>"; };
+		A6A87B71213B974100F1BF6D /* ChannelSnippetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelSnippetTests.swift; sourceTree = "<group>"; };
+		A6A87B72213B974100F1BF6D /* ChannelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelTests.swift; sourceTree = "<group>"; };
+		A6A87B73213B974100F1BF6D /* ChannelThumbnailsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelThumbnailsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,7 +244,9 @@
 		A6659795212B539E00732791 /* YoutubeDataKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				A6659796212B539E00732791 /* YoutubeDataKitTests.swift */,
+				A6A87B5E213AEFA800F1BF6D /* BaseTestCase.swift */,
+				A6A87B58213038F300F1BF6D /* Stubs */,
+				A6A87B6F213B974100F1BF6D /* ChannelList */,
 				A6659798212B539E00732791 /* Info.plist */,
 			);
 			path = YoutubeDataKitTests;
@@ -355,6 +373,28 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		A6A87B58213038F300F1BF6D /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				A6A87B60213AF0D200F1BF6D /* channel-list.json */,
+				A6A87B61213AF0D200F1BF6D /* channel-snippet.json */,
+				A6A87B63213AF0D200F1BF6D /* channel-thumbnails.json */,
+				A6A87B62213AF0D200F1BF6D /* channel.json */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		A6A87B6F213B974100F1BF6D /* ChannelList */ = {
+			isa = PBXGroup;
+			children = (
+				A6A87B70213B974100F1BF6D /* ChannelListTests.swift */,
+				A6A87B71213B974100F1BF6D /* ChannelSnippetTests.swift */,
+				A6A87B72213B974100F1BF6D /* ChannelTests.swift */,
+				A6A87B73213B974100F1BF6D /* ChannelThumbnailsTests.swift */,
+			);
+			path = ChannelList;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -455,6 +495,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6A87B67213AF0D200F1BF6D /* channel-thumbnails.json in Resources */,
+				A6A87B64213AF0D200F1BF6D /* channel-list.json in Resources */,
+				A6A87B65213AF0D200F1BF6D /* channel-snippet.json in Resources */,
+				A6A87B66213AF0D200F1BF6D /* channel.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,7 +604,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6659797212B539E00732791 /* YoutubeDataKitTests.swift in Sources */,
+				A6A87B77213B974100F1BF6D /* ChannelThumbnailsTests.swift in Sources */,
+				A6A87B75213B974100F1BF6D /* ChannelSnippetTests.swift in Sources */,
+				A6A87B76213B974100F1BF6D /* ChannelTests.swift in Sources */,
+				A6A87B5F213AEFA800F1BF6D /* BaseTestCase.swift in Sources */,
+				A6A87B74213B974100F1BF6D /* ChannelListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
