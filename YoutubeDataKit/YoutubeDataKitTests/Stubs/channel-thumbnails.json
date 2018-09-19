@@ -1,0 +1,17 @@
+{
+  "default": {
+    "url": "https://yt3.ggpht.com/a-/ACSszfEtef_BbD3pT3IKMBPy_kxLobdfhjxxqZOg9Q=s88-mo-c-c0xffffffff-rj-k-no",
+    "width": 88,
+    "height": 88
+  },
+  "medium": {
+    "url": "https://yt3.ggpht.com/a-/ACSszfEtef_BbD3pT3IKMBPy_kxLobdfhjxxqZOg9Q=s240-mo-c-c0xffffffff-rj-k-no",
+    "width": 240,
+    "height": 240
+  },
+  "high": {
+    "url": "https://yt3.ggpht.com/a-/ACSszfEtef_BbD3pT3IKMBPy_kxLobdfhjxxqZOg9Q=s800-mo-c-c0xffffffff-rj-k-no",
+    "width": 800,
+    "height": 800
+  }
+}

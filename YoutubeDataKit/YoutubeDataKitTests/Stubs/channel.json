@@ -1,0 +1,39 @@
+{
+  "kind": "youtube#channel",
+  "etag": "\"XI7nbFXulYBIpL0ayR_gDh3eu1k/MnmdWu6poyI3sLAtZ_bCvezfNoE\"",
+  "id": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
+  "snippet": {
+    "title": "Google Developers",
+    "description": "The Google Developers channel features talks from events, educational series, best practices, tips, and the latest updates across our products and platforms.",
+    "customUrl": "GoogleDevelopers",
+    "publishedAt": "2007-08-23T00:34:43.000Z",
+    "thumbnails": {
+      "default": {
+        "url": "https://yt3.ggpht.com/a-/ACSszfEtef_BbD3pT3IKMBPy_kxLobdfhjxxqZOg9Q=s88-mo-c-c0xffffffff-rj-k-no",
+        "width": 88,
+        "height": 88
+      },
+      "medium": {
+        "url": "https://yt3.ggpht.com/a-/ACSszfEtef_BbD3pT3IKMBPy_kxLobdfhjxxqZOg9Q=s240-mo-c-c0xffffffff-rj-k-no",
+        "width": 240,
+        "height": 240
+      },
+      "high": {
+        "url": "https://yt3.ggpht.com/a-/ACSszfEtef_BbD3pT3IKMBPy_kxLobdfhjxxqZOg9Q=s800-mo-c-c0xffffffff-rj-k-no",
+        "width": 800,
+        "height": 800
+      }
+    },
+    "localized": {
+      "title": "Google Developers",
+      "description": "The Google Developers channel features talks from events, educational series, best practices, tips, and the latest updates across our products and platforms."
+    }
+  },
+  "statistics": {
+    "viewCount": "143364267",
+    "commentCount": "0",
+    "subscriberCount": "1627450",
+    "hiddenSubscriberCount": false,
+    "videoCount": "4790"
+  }
+}

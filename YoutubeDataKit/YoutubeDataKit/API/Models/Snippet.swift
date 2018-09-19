@@ -21,7 +21,7 @@ extension Snippet {
         public let tags: [String]
         public let liveBroadcastContent: String
         public let publishedAt: String
-        public let thumbnails: Thumbnails.VideoList
+        public let thumbnails: Thumbnails
         public let title: String
         
         public enum CodingKeys: String, CodingKey {
@@ -46,7 +46,7 @@ extension Snippet {
         public let channelID: String
         public let description: String
         public let title: String?
-        public let thumbnails: Thumbnails.ActivityList
+        public let thumbnails: Thumbnails
         public let type: String
         
         public enum CodingKeys: String, CodingKey {
@@ -99,7 +99,7 @@ extension Snippet {
         public let description: String
         public let localized: Localized
         public let publishedAt: String
-        public let thumbnails: Thumbnails.Default
+        public let thumbnails: Thumbnails
         public let title: String
         
         public enum CodingKeys: String, CodingKey {
@@ -164,7 +164,7 @@ extension Snippet {
         public let description: String
         public let liveBroadcastContent: String
         public let publishedAt: String
-        public let thumbnails: Thumbnails.SearchList
+        public let thumbnails: Thumbnails
         public let title: String
         
         public enum CodingKeys: String, CodingKey {
@@ -197,7 +197,7 @@ extension Snippet {
         public let description: String
         public let publishedAt: String
         public let resourceID: ResourceID.SubscriptionsList
-        public let thumbnails: Thumbnails.Default
+        public let thumbnails: Thumbnails
         public let title: String
         
         public enum CodingKeys: String, CodingKey {
@@ -225,7 +225,7 @@ extension Snippet {
         public let description: String
         public let localized: Localized
         public let publishedAt: String
-        public let thumbnails: Thumbnails.PlaylistsList
+        public let thumbnails: Thumbnails
         public let title: String
         
         public enum CodingKeys: String, CodingKey {
@@ -249,7 +249,7 @@ extension Snippet {
         public let position: Int
         public let publishedAt: String
         public let resourceID: ResourceID.PlaylistItemsList
-        public let thumbnails: Thumbnails.PlaylistItemsList
+        public let thumbnails: Thumbnails
         public let title: String
         
         public enum CodingKeys: String, CodingKey {
