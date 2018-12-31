@@ -5,4 +5,5 @@ excluded: # paths to ignore during linting. Takes precedence over `included`.
 identifier_name:
   excluded: # excluded via string array
     - id
+    - tv
     - hl # Language code in Youtube API docs
