@@ -56,36 +56,36 @@ public struct BrandingSettings: Codable {
 }
 
 public struct Image: Codable {
-    public let bannerImageURL: String
-    public let bannerMobileExtraHdImageURL: String
-    public let bannerMobileHdImageURL: String
-    public let bannerMobileImageURL: String
-    public let bannerMobileLowImageURL: String
-    public let bannerMobileMediumHdImageURL: String
-    public let bannerTabletExtraHdImageURL: String
-    public let bannerTabletHdImageURL: String
-    public let bannerTabletImageURL: String
-    public let bannerTabletLowImageURL: String
-    public let bannerTvHighImageURL: String
-    public let bannerTvImageURL: String
-    public let bannerTvLowImageURL: String
-    public let bannerTvMediumImageURL: String
+    public let banner: URL
+    public let mobile: URL
+    public let mobileLow: URL
+    public let mobileMediumHd: URL
+    public let mobileHd: URL
+    public let mobileExtraHd: URL
+    public let tablet: URL
+    public let tabletLow: URL
+    public let tabletHd: URL
+    public let tabletExtraHd: URL
+    public let tv: URL
+    public let tvLow: URL
+    public let tvMedium: URL
+    public let tvHigh: URL
     
     public enum CodingKeys: String, CodingKey {
-        case bannerImageURL = "bannerImageUrl"
-        case bannerMobileExtraHdImageURL = "bannerMobileExtraHdImageUrl"
-        case bannerMobileHdImageURL = "bannerMobileHdImageUrl"
-        case bannerMobileImageURL = "bannerMobileImageUrl"
-        case bannerMobileLowImageURL = "bannerMobileLowImageUrl"
-        case bannerMobileMediumHdImageURL = "bannerMobileMediumHdImageUrl"
-        case bannerTabletExtraHdImageURL = "bannerTabletExtraHdImageUrl"
-        case bannerTabletHdImageURL = "bannerTabletHdImageUrl"
-        case bannerTabletImageURL = "bannerTabletImageUrl"
-        case bannerTabletLowImageURL = "bannerTabletLowImageUrl"
-        case bannerTvHighImageURL = "bannerTvHighImageUrl"
-        case bannerTvImageURL = "bannerTvImageUrl"
-        case bannerTvLowImageURL = "bannerTvLowImageUrl"
-        case bannerTvMediumImageURL = "bannerTvMediumImageUrl"
+        case banner         = "bannerImageUrl"
+        case mobile         = "bannerMobileImageUrl"
+        case mobileLow      = "bannerMobileLowImageUrl"
+        case mobileMediumHd = "bannerMobileMediumHdImageUrl"
+        case mobileHd       = "bannerMobileHdImageUrl"
+        case mobileExtraHd  = "bannerMobileExtraHdImageUrl"
+        case tablet         = "bannerTabletImageUrl"
+        case tabletLow      = "bannerTabletLowImageUrl"
+        case tabletHd       = "bannerTabletHdImageUrl"
+        case tabletExtraHd  = "bannerTabletExtraHdImageUrl"
+        case tv             = "bannerTvImageUrl"
+        case tvLow          = "bannerTvLowImageUrl"
+        case tvMedium       = "bannerTvMediumImageUrl"
+        case tvHigh         = "bannerTvHighImageUrl"
     }
 }
 
