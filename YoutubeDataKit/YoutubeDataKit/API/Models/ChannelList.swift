@@ -96,9 +96,9 @@ public struct Hint: Codable {
 
 public struct ChannelMetadata: Codable {
     public let defaultTab: String
-    public let description: String
+    public let description: String?
     public let featuredChannelsTitle: String
-    public let featuredChannelsURLs: [String]
+    public let featuredChannelsURLs: [String]?
     public let keywords: String
     public let profileColor: String
     public let showBrowseView: Bool
