@@ -47,6 +47,12 @@ public struct BrandingSettings: Codable {
     public let channelMetadata: ChannelMetadata
     public let hints: [Hint]
     public let image: Image
+    
+    public enum CodingKeys: String, CodingKey {
+        case channelMetadata = "channel"
+        case hints
+        case image
+    }
 }
 
 public struct Image: Codable {
