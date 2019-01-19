@@ -41,11 +41,11 @@ extension Snippet {
 
 extension Snippet {
     public struct ActivityList: Codable {
-        public let publishedAt: String
+        public let publishedAt: Date
         public let channelTitle: String
         public let channelID: String
         public let description: String
-        public let title: String?
+        public let title: String
         public let thumbnails: Thumbnails
         public let type: String
         
