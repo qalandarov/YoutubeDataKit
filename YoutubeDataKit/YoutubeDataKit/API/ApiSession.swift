@@ -39,6 +39,30 @@ public extension Decodable {
             throw ResponseError.unexpectedResponse("The response data is empty.")
         }
         
-        return try JSONDecoder().decode(Self.self, from: data)
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601WithAndWithoutFS
+        
+        return try decoder.decode(Self.self, from: data)
     }
+}
+
+private extension JSONDecoder.DateDecodingStrategy {
+    static let iso8601WithAndWithoutFS = custom { decoder throws -> Date in
+        let container = try decoder.singleValueContainer()
+        let string = try container.decode(String.self)
+        if let date = Formatter.iso8601.date(from: string) ?? Formatter.iso8601withFS.date(from: string) {
+            return date
+        }
+        throw DecodingError.dataCorruptedError(in: container, debugDescription: "Invalid date: \(string)")
+    }
+}
+
+private extension Formatter {
+    static let iso8601 = ISO8601DateFormatter()
+    
+    static let iso8601withFS: ISO8601DateFormatter = {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        return formatter
+    }()
 }
