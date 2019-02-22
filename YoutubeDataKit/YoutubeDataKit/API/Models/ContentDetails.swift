@@ -22,6 +22,7 @@ extension ContentDetails {
 extension ContentDetails {
     public struct ActivityList: Codable {
         public let upload: Upload?
+        public let bulletin: Bulletin?
     }
 }
 

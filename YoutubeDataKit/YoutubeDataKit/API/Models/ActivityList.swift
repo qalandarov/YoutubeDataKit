@@ -34,9 +34,14 @@ public struct Activity: Codable {
 }
 
 public struct Upload: Codable {
-    public let videoID: String
-    
-    public enum CodingKeys: String, CodingKey {
-        case videoID = "videoId"
-    }
+    public let videoId: String
+}
+
+public struct Bulletin: Codable {
+    public let resourceId: Resource
+}
+
+public struct Resource: Codable {
+    public let kind: String
+    public let videoId: String
 }
